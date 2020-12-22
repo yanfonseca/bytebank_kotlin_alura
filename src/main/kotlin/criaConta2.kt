@@ -1,6 +1,5 @@
+// Paradigma procedural
 fun criaConta2() {
-
-    // Paradigma procedural
     val titular: String = "Yan"
     val numeroConta: Int = 2222
     var saldo: Double = 0.0
@@ -15,10 +14,7 @@ fun criaConta2() {
     getSaldo1(saldo)
     getSaldo2(saldo)
 
-    teste1()
-    teste2()
-    teste3()
-    teste4()
+
 }
 
 

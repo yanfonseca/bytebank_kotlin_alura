@@ -1,5 +1,4 @@
 fun getSaldo2(saldo: Double) {
-
     when {
         saldo > 0.0 -> {
             println("Saldo positivo")

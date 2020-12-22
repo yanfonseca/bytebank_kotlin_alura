@@ -1,9 +1,13 @@
-class Conta(
-    val titular: String,
+class ContaTeste1(
+    val titular: String, // val declara properiedade imutável
     val numero: Int = 1000000
 ) {
-    var saldo = 0.0
-        private set
+    var saldo = 0.0 // var possibilita a alteração da variável
+        private set // Só pode ser alterada dentro da classe
+
+    init {
+        println("Criou ContaTeste1!")
+    }
 
     fun deposita(valor: Double) {
         if (valor > 0) {
@@ -17,7 +21,7 @@ class Conta(
         }
     }
 
-    fun transfere(valor: Double, destino: Conta): Boolean {   // Métodos e funções retornam Unit por padrão
+    fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
             saldo -= valor
             destino.deposita(valor)
@@ -25,6 +29,5 @@ class Conta(
         }
         return false
     }
+
 }
-
-

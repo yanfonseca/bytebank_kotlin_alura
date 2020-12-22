@@ -1,9 +1,18 @@
-class Conta(
-    val titular: String,
-    val numero: Int = 1000000
-) {
+class ContaTeste2 {
+    var titular: String
+    var numero: Int
+
     var saldo = 0.0
         private set
+
+    init {
+        println("Criou ContaTeste2!")
+    }
+
+    constructor(titular: String, numero: Int){
+        this.titular = titular
+        this.numero = numero
+    }
 
     fun deposita(valor: Double) {
         if (valor > 0) {
@@ -17,7 +26,7 @@ class Conta(
         }
     }
 
-    fun transfere(valor: Double, destino: Conta): Boolean {   // Métodos e funções retornam Unit por padrão
+    fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
             saldo -= valor
             destino.deposita(valor)
@@ -25,6 +34,5 @@ class Conta(
         }
         return false
     }
+
 }
-
-
